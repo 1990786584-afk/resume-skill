@@ -1,0 +1,6 @@
+interface:
+  display_name: "中文一页简历"
+  short_description: "制作刚好一页的中文结果导向简历"
+  default_prompt: "Use $zh-one-page-resume to turn this resume into a polished Chinese one-page version with quantified results and balanced layout."
+policy:
+  allow_implicit_invocation: true
