@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{{NAME}} - {{TARGET_ROLE}}</title>
+  <style>
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: A4; margin: 0; }
+    body {
+      margin: 0;
+      background: #f3f5f7;
+      color: #30343a;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 13.8px;
+      line-height: 1.34;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 9mm 11.5mm 8mm;
+      overflow: hidden;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 26mm;
+      gap: 10mm;
+      align-items: start;
+      border-bottom: 2px solid #6f8da9;
+      padding-bottom: 5.5mm;
+    }
+    h1 { margin: 0; font-size: 28px; line-height: 1; color: #324f6c; }
+    .target { color: #324f6c; font-size: 15.4px; font-weight: 700; margin-top: 4px; }
+    .contact { color: #555d66; font-size: 13.6px; margin-top: 4px; }
+    .summary { margin-top: 4px; max-width: 154mm; }
+    .photo { width: 25mm; height: 32mm; object-fit: cover; border-radius: 3px; border: 1px solid #d6dde5; }
+    .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; margin: 5mm 0 3.6mm; }
+    .metric { background: #eef3f7; border-left: 4px solid #6f8da9; padding: 6px 7px; min-height: 37px; }
+    .metric b { display: block; color: #254866; font-size: 17px; line-height: 1.05; }
+    .metric span { display: block; color: #58616b; font-size: 11.6px; line-height: 1.18; margin-top: 3px; }
+    .section { margin-top: 3.7mm; }
+    .section-title { display: flex; align-items: center; gap: 10px; color: #254866; font-size: 15.6px; font-weight: 750; margin-bottom: 1.5mm; }
+    .section-title::after { content: ""; height: 1px; background: #d9e1e8; flex: 1; }
+    .item { margin-bottom: 2.2mm; }
+    .item-head { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: baseline; margin-bottom: .9mm; }
+    .item-main { font-weight: 750; color: #262b31; font-size: 14.4px; }
+    .item-date { color: #4d5660; font-size: 13.4px; white-space: nowrap; font-weight: 620; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { position: relative; padding-left: 12px; margin-bottom: 1.05mm; }
+    li::before { content: "•"; position: absolute; left: 0; color: #6f8da9; font-weight: 700; }
+    .lead { font-weight: 700; color: #263b50; }
+    .cols { display: grid; grid-template-columns: 1.1fr .9fr; gap: 6mm; }
+    .skills { display: grid; grid-template-columns: 22mm 1fr; row-gap: 3px; column-gap: 5px; font-size: 13.2px; }
+    .skills b { color: #254866; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <h1>{{NAME}}</h1>
+        <div class="target">{{TARGET_ROLE}}</div>
+        <div class="contact">{{CONTACT}}</div>
+        <div class="summary">{{SUMMARY}}</div>
+      </div>
+      <img class="photo" src="{{PHOTO_SRC}}" alt="证件照">
+    </header>
+
+    <section class="metrics">
+      <div class="metric"><b>{{M1}}</b><span>{{M1_LABEL}}</span></div>
+      <div class="metric"><b>{{M2}}</b><span>{{M2_LABEL}}</span></div>
+      <div class="metric"><b>{{M3}}</b><span>{{M3_LABEL}}</span></div>
+      <div class="metric"><b>{{M4}}</b><span>{{M4_LABEL}}</span></div>
+      <div class="metric"><b>{{M5}}</b><span>{{M5_LABEL}}</span></div>
+    </section>
+
+    <!-- Add Experience, Projects, Skills, and Education sections here. -->
+  </main>
+</body>
+</html>
